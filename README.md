@@ -1,21 +1,22 @@
-# vue-beers
+# Vue-beers
+This is a Vue client, which can login with an API, it is specifically made for my own [Beer-api](https://github.com/Thomas-Machielsen/beer-api).
 
-## Project setup
-```
-npm install
-```
+## Getting Started
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+`git clone`, `npm i`, and then `npm run serve`
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Built With
+[Vue](https://vuejs.org/)
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Authors
+
+* **Thomas Machielsen**  - [Thomas-machielsen](https://github.com/Thomas-Machielsen)
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Hat tip to anyone who ever teached me anything about code.
