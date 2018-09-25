@@ -4,8 +4,21 @@ const postData = (url, data) => fetch(url, { // eslint-disable-line  no-undef
   headers: {
     'Content-Type': 'application/json',
   },
-}).then(res => res.json())
+})
+  .then(res => res.json())
   .catch(error => error)
   .then(response => response);
 
-export default postData;
+const getData = (url, token) => {
+  const myHeaders = new Headers(); // eslint-disable-line no-undef
+  myHeaders.append('x-access-token', token);
+
+  return fetch(url, { // eslint-disable-line no-undef
+    headers: myHeaders,
+  })
+    .then(res => res.json())
+    .catch(err => err)
+    .then(response => response);
+};
+
+export default { postData, getData };
