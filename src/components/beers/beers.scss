@@ -1,0 +1,17 @@
+.beer {
+    padding: $space-m 0;
+    border-top: 1px solid $c-off-white;
+
+    &__name,
+    &__brewer {
+        margin-bottom: 0;
+    }
+
+    &__name {
+        font-size: $font-size-m;
+    }
+
+    &__brewer {
+        color: $c-light-blue;
+    }
+}
