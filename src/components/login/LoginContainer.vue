@@ -9,7 +9,7 @@
 </template>
 
 <script>
-    import postData from '../api/api';
+    import api from '../api/api';
     import ErrorMessage from '../contentBlock/ErrorMessage.vue';
     import CustomInput from '../inputs/Input.vue'
 
@@ -27,7 +27,7 @@
             }
         },
         methods: {
-            postFormData: function() {
+            postFormData() {
                 event.preventDefault();
                 if(!this.username || !this.password) { return; }
 
@@ -36,16 +36,16 @@
                     password: this.password
                 };
 
-                const url = 'https://beeer-api.herokuapp.com/api/authenticate/';
+                const authenticationEndpoint = process.env.VUE_APP_API_AUTHENTICATE;
 
-                postData(url, formData).then(result => this.isUserAuthenticated(result));
+                api.postData(authenticationEndpoint, formData).then(result => this.isUserAuthenticated(result));
             },
 
             passwordChanged(password) {
                 this.password = password;
             },
 
-            usernameChanged: function(username) {
+            usernameChanged(username) {
                 this.username = username;
             },
 
